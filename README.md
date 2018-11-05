@@ -70,7 +70,7 @@ export default class Demo extends Component {
           </Draggable>
         </Map>
         <div>
-          The pigeon is sitting at {this.state.center[0]}, {this.state.center[1]}
+          The pigeon is sitting at {JSON.stringify(this.state)}
         </div>
       </div>
     )
@@ -81,3 +81,22 @@ export default class Demo extends Component {
 Please note that this project is still rather young and currently binds 6 events per component. It works fine if you have just a few draggable components, but if you have hundresds, you might see big performance penalties.
 
 If you wish to support such use cases, please help with a PR.
+
+
+## To work on:
+
+```
+yarn
+yarn start
+# open http://localhost:4040/
+```
+
+## To publish:
+
+```
+# commit everything
+npm build # this needs to pass.
+npm verison patch # or minor or major
+npm publish
+git push --tags
+```
