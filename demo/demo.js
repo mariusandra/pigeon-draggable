@@ -6,8 +6,9 @@ import Draggable from 'pigeon-draggable'
 import pigeonSvg from './pigeon.svg'
 
 const locations = {
+  "Paris": {"center":[50.1102,3.1506],"zoom":6,"dragAnchor":[48.8565,2.3475]},
   "Iceland": {"center":[59.87637580063806,16.25089921561684],"zoom":3.004015716849884,"dragAnchor":[65.10368655246947,-18.612459647449725]},
-  "Paris": {"center":[50.1102,3.1506],"zoom":6,"dragAnchor":[48.8565,2.3475]}
+  "Saaremaa": {"center":[58.745023857606306,23.54102969434328],"zoom":6,"dragAnchor":[58.475681126797404,22.562343749999997]}
 }
 
 export default class Demo extends Component {
