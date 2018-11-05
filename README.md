@@ -1,5 +1,7 @@
 # pigeon-draggable - Draggable Overlay component for pigeon-maps
 
+This component creates overlays in pigeon-maps, which can then be dragged with touch or mouse events.
+
 [![npm version](https://img.shields.io/npm/v/pigeon-draggable.svg)](https://www.npmjs.com/package/pigeon-draggable)
 
 React demo: https://mariusandra.github.io/pigeon-draggable/
@@ -10,7 +12,7 @@ Example: https://github.com/mariusandra/pigeon-draggable/blob/master/demo/demo.j
 
 API: https://github.com/mariusandra/pigeon-draggable/blob/master/src/index.js
 
-To use in your component (with beta version 0.2.0):
+To use in your component:
 
 ```js
 // default for React
@@ -75,3 +77,7 @@ export default class Demo extends Component {
   }
 }
 ```
+
+Please note that this project is still rather young and currently binds 6 events per component. It works fine if you have just a few draggable components, but if you have hundresds, you might see big performance penalties.
+
+If you wish to support such use cases, please help with a PR.
