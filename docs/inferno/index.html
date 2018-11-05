@@ -4,6 +4,18 @@
     <meta charset="utf-8">
     <meta content='width=device-width, initial-scale=1' name='viewport'>
     <title>pigeon-draggable</title>
+    <style>
+      .animated-marker.stopped {
+        animation: mymove 1s 1;
+      }
+      /* Standard syntax */
+      @keyframes mymove {
+        0% {left: 0px;}
+        50% {left: 600px;}
+        51% {left: -600px;}
+        100% {left: 0px;}
+      }
+    </style>
   </head>
   <body>
     <div id="root"></div>
