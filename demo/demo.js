@@ -25,7 +25,7 @@ export default class Demo extends Component {
 
     return (
       <div style={{ textAlign: 'center', margin: '0 auto', maxWidth: 600 }}>
-        <div style={{ marginBottom: 20, marginTop: 20 }}>
+        <div style={{ marginTop: 20, height: 50 }}>
           {this.state.location
             ? `There is a giant pigeon sitting on top of ${this.state.location}! Quickly! Drag it away!`
             : 'Great work you wonderful person, you!'}
@@ -74,7 +74,13 @@ export default class Demo extends Component {
             </button>
           ))}
         </div>
-        <code style={{ display: 'block', marginTop: 50, color: '#888' }}>
+        <div style={{ marginTop: 50, fontSize: 12, opacity: 0.7 }}>
+          This is a demonstration of a draggable marker for <a href='https://pigeon-maps.js.org/'>pigeon-maps</a>, a ReactJS map library
+          <br />
+          <br />
+          <a href='https://github.com/mariusandra/pigeon-draggable/blob/master/demo/demo.js#L8'>Send a PR</a> to add locations
+        </div>
+        <code style={{ display: 'block', marginTop: 20, color: '#888' }}>
           {JSON.stringify({
             center: this.state.center,
             zoom: this.state.zoom,
