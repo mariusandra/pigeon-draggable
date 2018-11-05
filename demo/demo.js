@@ -40,7 +40,7 @@ export default class Demo extends Component {
           </Draggable>
         </Map>
         <div>
-          The pigeon is sitting at {this.state.center[0]}, {this.state.center[1]}
+          The pigeon is sitting at {Math.round(this.state.dragAnchor[0] * 10000) / 10000}, {Math.round(this.state.dragAnchor[1] * 10000) / 10000}
         </div>
       </div>
     )
