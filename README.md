@@ -45,7 +45,7 @@ export default class Demo extends Component {
     return (
       <div style={{ textAlign: 'center', margin: '0 auto', maxWidth: 600 }}>
         <div style={{ marginBottom: 20 }}>
-          There's a giant pigeon sitting on top of Paris!
+          There is a giant pigeon sitting on top of Paris!
           Quickly! Drag it away!
         </div>
         <Map
