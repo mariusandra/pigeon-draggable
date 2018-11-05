@@ -14,11 +14,15 @@ export default class Demo extends Component {
   constructor (props) {
     super(props)
     this.state = Object.assign({}, locations['Paris'], {
-      location: 'Paris'
+      location: 'Paris',
+      animating: false,
+      animationStart: null
     })
   }
 
   render () {
+    const animationOffset = 0
+
     return (
       <div style={{ textAlign: 'center', margin: '0 auto', maxWidth: 600 }}>
         <div style={{ marginBottom: 20, marginTop: 20 }}>
@@ -34,10 +38,20 @@ export default class Demo extends Component {
           height={400}>
           <Draggable
             anchor={this.state.dragAnchor}
-            offset={[60, 87]}
-            onDragEnd={(anchor) => {
-              this.setState({ dragAnchor: anchor, location: null })
+            offset={[60 + animationOffset, 87]}
+            onDragStart={() => {
+              this.setState({
+                dragging: true
+              })
             }}
+            onDragEnd={(anchor) => {
+              this.setState({
+                dragging: false,
+                dragAnchor: anchor,
+                location: null
+              })
+            }}
+            className={`animated-marker${!this.state.location && !this.state.dragging ? ' stopped' : ''}`}
             style={{ clipPath: 'polygon(100% 0, 83% 0, 79% 15%, 0 68%, 0 78%, 39% 84%, 43% 96%, 61% 100%, 79% 90%, 69% 84%, 88% 71%, 100% 15%)' }}>
             <img
               src={pigeonSvg}
@@ -48,12 +62,14 @@ export default class Demo extends Component {
         <div style={{ marginBottom: 20 }}>
           {'Visit next: '}
           {Object.keys(locations).map(location => (
-            <button onClick={() => {
-              this.setState({
-                ...locations[location],
-                location
-              })
-            }}>
+            <button
+              key={location}
+              onClick={() => {
+                this.setState({
+                  ...locations[location],
+                  location
+                })
+              }}>
               {location}
             </button>
           ))}
