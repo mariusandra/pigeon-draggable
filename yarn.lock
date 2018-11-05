@@ -3429,9 +3429,9 @@ pify@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/pify/-/pify-3.0.0.tgz#e5a4acd2c101fdf3d9a4d07f0dbc4db49dd28176"
 
-pigeon-maps@^0.11.5:
-  version "0.11.5"
-  resolved "https://registry.yarnpkg.com/pigeon-maps/-/pigeon-maps-0.11.5.tgz#c2b325d8963e73c22af318e2ac06b832b348c260"
+pigeon-maps@^0.11.6:
+  version "0.11.6"
+  resolved "https://registry.yarnpkg.com/pigeon-maps/-/pigeon-maps-0.11.6.tgz#8ad756d2d7998c577eadd5940e0449c4745f73f6"
   dependencies:
     eslint-plugin-import "^2.7.0"
     eslint-plugin-node "^5.2.0"
