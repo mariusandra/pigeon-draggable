@@ -37,8 +37,8 @@ export default class DraggablePigeon extends Component {
   }
 
   componentWillUnmount () {
-    this.unBindMouseEvents()
-    this.unBindTouchEvents()
+    this.unbindMouseEvents()
+    this.unbindTouchEvents()
   }
 
   wa = (e, t, o) => window.addEventListener(e, t, o)
@@ -80,7 +80,7 @@ export default class DraggablePigeon extends Component {
         deltaY: 0
       })
 
-      if (this.props.onDraStart) {
+      if (this.props.onDragStart) {
         this.props.onDragStart()
       }
     }
